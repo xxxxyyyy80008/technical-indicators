@@ -63,7 +63,7 @@ class OHLCVIndicator(OHLCIndicator):
     """Base for indicators requiring OHLC + Volume data"""
     def _validate_columns(self):
         """Ensure OHLCV columns exist"""
-        super()._validate_columns()  # Validate OHLC first
+        super()._validate_columns()  
         if 'volume' not in self.data.columns:
             raise ValueError("Missing required column: volume")
 
